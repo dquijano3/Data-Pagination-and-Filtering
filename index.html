@@ -14,17 +14,23 @@
     <header class="header">
       <h2>Students</h2>
       
-        <!-- Extra Credit: Dynamically insert search form here  
-        
-          EXAMPLE - Search form:
+        <div id="search-form-container"></div>
 
-          <label for="search" class="student-search">
-            <span>Search by name</span>
-            <input id="search" placeholder="Search by name...">
-            <button type="button"><img src="img/icn-search.svg" alt="Search icon"></button>
-          </label>
-        
-        -->
+        <script>
+          function insertSearchForm(){
+            const searchFormContainer = document.getElementById("search-form-container");
+
+            const searchFormHTML = `
+              <label for="search" class="student-search">
+                <span>Search by name</span>
+                <input id="search" placeholder="Search by name...">
+                <button type="button"></button>
+              </label>  
+            `;
+            searchFormContainer.innerHTML = searchFormHTML;
+          }
+          insertSearchForm();
+        </script>
 
     </header>
     

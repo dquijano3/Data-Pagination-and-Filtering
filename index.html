@@ -28,7 +28,14 @@
               </label>  
             `;
             searchFormContainer.innerHTML = searchFormHTML;
+            const searchButton = document.getElementById("search-btn");
           }
+
+         function performSearch() {
+           const searchInput = document.getElementById("search").value;
+    // Perform the search operation based on the entered searchInput
+          console.log("Performing search for:", searchInput);
+       }
           insertSearchForm();
         </script>
 

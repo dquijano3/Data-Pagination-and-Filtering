@@ -28,7 +28,16 @@
               </label>  
             `;
             searchFormContainer.innerHTML = searchFormHTML;
+
             const searchButton = document.getElementById("search-btn");
+            const searchInput = document.getElementById("search");
+    
+            searchButton.addEventListener("click", performSearch);
+            searchInput.addEventListener("keydown", function(event) {
+               if (event.key === "Enter") {
+                performSearch();
+              }
+           });
           }
 
          function performSearch() {
